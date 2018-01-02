@@ -8,14 +8,15 @@ def nyc_pigeon_organizer(data)
           pigeon_list[pigeon] = {}
         end
         if category != :color
-          pigeon_list[pigeon][category] = option
+          pigeon_list[pigeon][category] = [option.to_s]
         elsif pigeon_list[pigeon][category] == nil
-          pigeon_list[pigeon][category] = [option]
-        else
-          pigeon_list[pigeon][category] << option
-        end
+         pigeon_list[pigeon][category] = [option.to_s]
+       else
+          pigeon_list[pigeon][category] << option.to_s
+       end
       end
-    end
+
+end
   end
   pigeon_list
 end
